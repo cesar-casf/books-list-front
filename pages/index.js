@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import { Container, Content, ContentTwo, MenuBar } from '../styles/styles';
 
 export default function Home() {
@@ -22,10 +23,10 @@ export default function Home() {
             <div>
               <h3>Cadastrar livros</h3>
               <Image
-                src="/images/bookadd.png"
+                src="/bookadd.png"
                 alt="Picture of the author"
-                width={500}
-                height={500}
+                width={100}
+                height={100}
               />
 
             </div>
@@ -34,13 +35,23 @@ export default function Home() {
         </div>
 
         <div>
-
+          
           <ContentTwo>
+          <Link href="contact">
+          <a>
             <div>
               <h3>Acessar lista de livros</h3>
-            </div>
+            <Image
+                src="/booklist.png"
+                alt="Picture of the author"
+                width={100}
+                height={100}
+              />
+              </div>
+              </a>
+          </Link>
           </ContentTwo>
-
+          
         </div>
       </Container>
 

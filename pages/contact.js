@@ -1,10 +1,13 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { Container, Content } from '../styles/styles';
+import { Container, Content, MenuBar } from '../styles/styles';
 
 export default function Contact() {
   return (
     <div>
+      <MenuBar>
+        Sistema de Gestão de Livros
+      </MenuBar>
       <Container>
         <Content>
           <Head>
