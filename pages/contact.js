@@ -1,19 +1,23 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import styles from '../styles/Home.module.css'
+import { Container, Content } from '../styles/styles';
 
 export default function Contact() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <div>
+      <Container>
+        <Content>
+          <Head>
+            <title>Create Next App</title>
+            <link rel="icon" href="/favicon.ico" />
+          </Head>
 
-      <div className={styles.title}>
-        <h3>Página de contato</h3>
-      </div>
-        <Link href="/"><a>Acessar o Home</a></Link>
+          <div>
+            <h3>Página de contato</h3>
+            <Link href="/"><a>Acessar o Home</a></Link>
+          </div>
+        </Content>
+      </Container>
 
 
     </div>

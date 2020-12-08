@@ -1,20 +1,49 @@
 import Head from 'next/head'
-import Link from 'next/link'
-import styles from '../styles/Home.module.css'
+import Image from 'next/image'
+import { Container, Content, ContentTwo, MenuBar } from '../styles/styles';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <title>Create Next App</title>
+        <title>Home - Book List InovaGS</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className={styles.title}>
-        <h3>Minha Home Page</h3>
-      </div>
-      <Link href='/contact'><a>Acessar o Contact</a></Link>
-      
+      <MenuBar>
+        Sistema de Gestão de Livros
+    </MenuBar>
+
+      <Container>
+        <div>
+
+
+          <Content>
+            <div>
+              <h3>Cadastrar livros</h3>
+              <Image
+                src="/images/bookadd.png"
+                alt="Picture of the author"
+                width={500}
+                height={500}
+              />
+
+            </div>
+          </Content>
+
+        </div>
+
+        <div>
+
+          <ContentTwo>
+            <div>
+              <h3>Acessar lista de livros</h3>
+            </div>
+          </ContentTwo>
+
+        </div>
+      </Container>
+
     </div>
   )
 }
