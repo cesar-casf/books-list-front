@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Container, Content, ContentTwo, MenuBar } from '../styles/styles';
+import { ButtonGreen, ButtonYellow, Centerdiv, Container, Content, ContentTwo, MenuBar } from '../styles/styles';
 
 export default function Home() {
   return (
@@ -17,37 +17,35 @@ export default function Home() {
 
       <Container>
         <div>
-
-
           <Content>
-            <div>
-              <h3>Cadastrar livros</h3>
+          <Link href="cadastro" passHref>
+            <a style={{ textDecoration: 'none' }}> 
+            <Centerdiv>
               <Image
-                src="/bookadd.png"
-                alt="Picture of the author"
+                src="/bookadd.svg"
                 width={100}
                 height={100}
               />
-
-            </div>
+              <ButtonYellow href="contact">Cadastrar livro</ButtonYellow>
+            </Centerdiv>
+            </a>  
+            </Link>
           </Content>
 
         </div>
 
         <div>
-          
           <ContentTwo>
           <Link href="contact">
-          <a>
-            <div>
-              <h3>Acessar lista de livros</h3>
+          <a style = {{ textDecoration: 'none'}}>
+            <Centerdiv>
             <Image
-                src="/booklist.png"
-                alt="Picture of the author"
+                src="/booklist.svg"
                 width={100}
                 height={100}
               />
-              </div>
+              <ButtonGreen>Listar livros</ButtonGreen>
+              </Centerdiv>
               </a>
           </Link>
           </ContentTwo>
