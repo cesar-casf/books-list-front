@@ -49,11 +49,11 @@ export default function Modal({ onClose = () => { }, dados }) {
           <form id="bookForm" name="bookForm" onSubmit={onSubmit}>
 
             <label style={{ marginLeft: "2px" }} htmlFor="titulo">Título:</label>
-            <Input id="title" name="title" onChange={onChange}></Input>
+            <Input id="title" name="title" onChange={onChange} required="required"></Input>
             <label style={{ marginLeft: "2px" }} htmlFor="autor">Autor:</label>
-            <Input id="autor" name="autor" onChange={onChange}></Input>
+            <Input id="autor" name="autor" onChange={onChange}required="required"></Input>
             <label style={{ marginLeft: "2px" }} htmlFor="category">Categoria:</label>
-            <Input id="category" name="category" onChange={onChange}></Input>
+            <Input id="category" name="category" onChange={onChange}required="required"></Input>
 
             <ButtonGreen type='submit'>Enviar</ButtonGreen>
             <ButtonRed type='reset' onClick={onClose}>Cancelar</ButtonRed>
