@@ -8,7 +8,6 @@ export default function Home() {
     <div>
       <Head>
         <title>Home - Book List InovaGS</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <MenuBar>
@@ -18,17 +17,17 @@ export default function Home() {
       <Container>
         <div>
           <Content>
-          <Link href="cadastro" passHref>
-            <a style={{ textDecoration: 'none' }}> 
-            <Centerdiv>
-              <Image
-                src="/bookadd.svg"
-                width={100}
-                height={100}
-              />
-              <ButtonYellow href="contact">Cadastrar livro</ButtonYellow>
-            </Centerdiv>
-            </a>  
+            <Link href="/cadastro">
+              <a style={{ textDecoration: 'none' }}>
+                <Centerdiv>
+                  <Image
+                    src="/bookadd.svg"
+                    width={100}
+                    height={100}
+                  />
+                  <ButtonYellow href="/cadastro">Cadastrar livro</ButtonYellow>
+                </Centerdiv>
+              </a>
             </Link>
           </Content>
 
@@ -36,20 +35,20 @@ export default function Home() {
 
         <div>
           <ContentTwo>
-          <Link href="contact">
-          <a style = {{ textDecoration: 'none'}}>
-            <Centerdiv>
-            <Image
-                src="/booklist.svg"
-                width={100}
-                height={100}
-              />
-              <ButtonGreen>Listar livros</ButtonGreen>
-              </Centerdiv>
+            <Link href="/livros">
+              <a style={{ textDecoration: 'none' }}>
+                <Centerdiv>
+                  <Image
+                    src="/booklist.svg"
+                    width={100}
+                    height={100}
+                  />
+                  <ButtonGreen href="/livros">Listar livros</ButtonGreen>
+                </Centerdiv>
               </a>
-          </Link>
+            </Link>
           </ContentTwo>
-          
+
         </div>
       </Container>
 

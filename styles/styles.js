@@ -33,19 +33,31 @@ export const Content = styled.div`
     }
     `;
 
-    export const ContentTwo = styled(Content)`
+export const ContentTwo = styled(Content)`
         :hover{
             border-color: #0CCE6B;
             transition-duration: 0.5s;
         }
     `;
 
-    export const ContentForm = styled(Content)`
+export const ContentForm = styled(Content)`
         cursor: default;
         border-color: #DCED31;
+        
     `;
 
-    export const MenuBar = styled.div`
+export const ContentList = styled(Content)`
+        cursor: default;
+        border-color: #0CCE6B;
+        width: 1000px;
+        height: auto;
+        display: block;
+        :hover{
+                border-color: #0CCE6B;
+                transition-duration: 0.5s;
+    `;
+
+export const MenuBar = styled.div`
     height: 60px;
     background: #201f24;
     color: #fff;
@@ -55,7 +67,7 @@ export const Content = styled.div`
     box-shadow: rgb(18, 18, 20) 0px 1rem 2rem;
     `;
 
-    export const Centerdiv = styled.div`
+export const Centerdiv = styled.div`
         align-items: center;
         justify-content: center;
         display: inline-grid;
@@ -63,23 +75,23 @@ export const Content = styled.div`
         height: 500px;
     `;
 
-    export const ButtonYellow = styled.button`
+export const ButtonYellow = styled.button`
         cursor: pointer;
         background: #DCED31;
         color: #201f24;
         font-size: 1.3em;
-        margin: 1em;
+        margin: 10px;
+        margin-bottom: 30px;
         padding: 0.25em 1em;
         border: 2px solid #DCED31;
         border-radius: 3px;
-
         :hover{
             background: #201f24;
             color: #DCED31; 
         }
     `;
 
-    export const ButtonGreen = styled(ButtonYellow)`
+export const ButtonGreen = styled(ButtonYellow)`
         background: #0CCE6B;
         border: 2px solid #0CCE6B;
         
@@ -87,4 +99,27 @@ export const Content = styled.div`
             background: #201f24;
             color: #0CCE6B;
         }
+    `;
+
+export const Input = styled.input`
+        background: #121214;
+        border: 0.5px solid #76767E;
+        height: 30px;
+        width: 300px;
+        color: #FFF;
+        margin: 10px;
+    `;
+
+    export const ListDiv = styled.div`
+        align-items: top;
+        justify-content: center;
+        display: flex;
+        width: auto;
+        height: auto;
+    `;
+    
+    export const Centertwo = styled(Centerdiv)`
+        align-items: top;
+        height: auto;
+        width: 500px;
     `;
