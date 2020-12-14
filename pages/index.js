@@ -5,19 +5,16 @@ import { ButtonGreen, ButtonYellow, Centerdiv, Container, Content, ContentTwo, M
 
 export default function Home() {
   return (
-    <div>
+    <div style={{height: "100%", width: "100%"}}>
+      <MenuBar>
+      Sistema de Gestão de Livros
+      </MenuBar>
       <Head>
         <title>Home - Book List InovaGS</title>
       </Head>
 
-      <MenuBar>
-        Sistema de Gestão de Livros
-    </MenuBar>
-
-      <Container>
-        <div>
+    <Container>
           <Content>
-            <Link href="/cadastro">
               <a style={{ textDecoration: 'none' }}>
                 <Centerdiv>
                   <Image
@@ -25,17 +22,19 @@ export default function Home() {
                     width={100}
                     height={100}
                   />
-                  <ButtonYellow href="/cadastro">Cadastrar livro</ButtonYellow>
+                 <Link href="/cadastro">
+                   <ButtonYellow>Cadastrar livro</ButtonYellow>
+                </Link>
                 </Centerdiv>
               </a>
-            </Link>
+            
           </Content>
 
-        </div>
+        
 
-        <div>
+        
           <ContentTwo>
-            <Link href="/livros">
+            
               <a style={{ textDecoration: 'none' }}>
                 <Centerdiv>
                   <Image
@@ -43,15 +42,16 @@ export default function Home() {
                     width={100}
                     height={100}
                   />
-                  <ButtonGreen href="/livros">Listar livros</ButtonGreen>
+                <Link href="/livros">
+                  <ButtonGreen>Listar livros</ButtonGreen>
+                </Link>
                 </Centerdiv>
               </a>
-            </Link>
+            
           </ContentTwo>
 
-        </div>
+        
       </Container>
-
-    </div>
+      </div>
   )
 }

@@ -3,8 +3,9 @@ import Link from 'next/link'
 import axios from 'axios'
 import useSWR from 'swr'
 import { MdDelete, MdEdit } from 'react-icons/md'
+import { BiArrowBack } from "react-icons/bi";
 import React, { useState } from 'react';
-import { ListDiv, Centertwo, Centerdiv, ContentForm, Container, ContentList, MenuBar } from '../styles/styles';
+import { Tr, Td, Th, Table, ButtonDelete, ButtonEdit, ListDiv, Centertwo, Centerdiv, ContentForm, Cont, ContentList, MenuBar } from '../styles/styles';
 import { fetchData } from '../lib/configaxios'
 
 const initialValue = {
@@ -18,8 +19,7 @@ const initialValue = {
 
 export default function Livros({ dados }) {
 
-    const { data }  = useSWR('https://books-listapi.herokuapp.com/api/books', fetchData, { initialData: dados, refreshInterval: 10 })
-
+    const { data }  = useSWR('https://books-listapi.herokuapp.com/api/books', fetchData, { initialData: dados, refreshInterval: 100 })
     const [values, setValues] = useState(initialValue);
 
     async function deleteData(livro)
@@ -60,49 +60,45 @@ export default function Livros({ dados }) {
         <div>
             <MenuBar>
                 Sistema de Gestão de Livros
-        <Link href="/"><a style={{ textDecoration: 'none', color: '#fff', margin: '30px' }}> ← Voltar</a></Link>
+        <       Link href="/"><a style={{ textDecoration: 'none', color: '#fff', margin: '30px' }}> <BiArrowBack></BiArrowBack> Voltar</a></Link>
             </MenuBar>
-            <Container>
+            <Cont>
               <ContentList>
                     <Head>
                         <title>Create Next App</title>
                     </Head>
 
                         <Centertwo>
-                            
-
-                        <h3>Lista de Livros</h3>
-                            <table>
+                        <h2>Lista de Livros</h2>
+                            <Table>
                                 
                                 <thead>
-                                <tr>
-                                    <th>Título</th>
-                                    <th>Autor</th>
-                                    <th>Categoria</th>
-                                    <th></th>
-                                </tr>
+                                <Tr>
+                                    <Th>Título</Th>
+                                    <Th>Autor</Th>
+                                    <Th>Categoria</Th>
+                                    <Th>Operação</Th>
+                                </Tr>
                                 </thead>
 
                                 <tbody>
                                         {data.map(({id, title, autor, category}) => ( 
-                                            <tr key={id}>
-                                            <td>{title}</td>
-                                            <td>{autor}</td>
-                                            <td>{category}</td>
-                                            <td>
-                                                
-                                                <MdEdit style={{cursor: "pointer", color: "lightblue"}}></MdEdit>
-                                                <MdDelete style={{cursor: "pointer", color: "#F10"}} onClick={(e) => onClick({id, title, autor, category})}></MdDelete>
-                                            </td>
-                                            </tr>
+                                            <Tr key={id}>
+                                            <Td>{title}</Td>
+                                            <Td>{autor}</Td>
+                                            <Td>{category}</Td>
+                                            <Td>
+                                                <ButtonDelete onClick={(e) => onClick({id, title, autor, category})}> <MdDelete></MdDelete> </ButtonDelete>
+                                                <ButtonEdit> <MdEdit></MdEdit> </ButtonEdit>
+                                            </Td>
+                                            </Tr>
                                         ))}  
                                 </tbody>
-                            </table>
-                   
+                            </Table>
                     </Centertwo>
 
                     </ContentList>
-            </Container>
+            </Cont>
 
 
         </div>

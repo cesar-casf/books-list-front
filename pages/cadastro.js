@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import React, { useState } from 'react';
+import { BiArrowBack } from "react-icons/bi";
 import { saveData, editData, deleteData } from '../lib/configaxios'
 import { Input, ButtonYellow, Centerdiv, Container, ContentForm, MenuBar } from '../styles/styles';
 //console.log(form);
@@ -40,7 +41,7 @@ export default function Cadastro() {
     <div>
       <MenuBar>
         Sistema de Gestão de Livros
-        <Link href="/"><a style={{ textDecoration: 'none', color: '#fff', margin: '30px' }}> ← Voltar</a></Link>
+            <Link href="/"><a style={{ textDecoration: 'none', color: '#fff', margin: '30px' }}> <BiArrowBack></BiArrowBack> Voltar</a></Link>
       </MenuBar>
       <Container>
         <ContentForm>
