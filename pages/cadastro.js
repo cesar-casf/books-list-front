@@ -38,6 +38,7 @@ export default function Cadastro() {
         Sistema de Gestão de Livros
             <Link href="/"><a style={{ textDecoration: 'none', color: '#fff', margin: '30px' }}> <BiArrowBack></BiArrowBack> Voltar</a></Link>
       </MenuBar>
+      <center>
       <Container>
         <ContentForm>
           <Head>
@@ -62,7 +63,7 @@ export default function Cadastro() {
 
         </ContentForm>
       </Container>
-
+      </center>
 
     </div>
   )
