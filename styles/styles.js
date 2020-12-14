@@ -27,13 +27,29 @@ export const Container = styled.div`
     }
 `;
 
+export const FlexContainer = styled.div`
+    display: flex;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 440px 440px;
+    vertical-align: top;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 960px){
+        display: flex;
+        align-self: center;
+        justify-self: center;
+    }
+`;
+
 export const Content = styled.div`
     justify-content: center;
     box-sizing: border-box;
     color: #fff;
     display: flex;
     width: 40%;
-    min-width: 230px;
+    min-width: 200px;
     max-width: 400px;
     height: 500px;
     margin: 40px;
@@ -66,6 +82,8 @@ export const ContentForm = styled(Content)`
         cursor: default;
         border-color: #DCED31;
         width: 70%;
+        min-width: 270px;
+        display: block;
     `;
 
 export const ContentList = styled(Content)`
@@ -73,15 +91,12 @@ export const ContentList = styled(Content)`
         border-color: #0CCE6B;
         max-width: 1000px;
         width: 90%;
-        min-width: 300px;
+        min-width: 270px;
         height: auto;
         display: block;
         :hover{
                 border-color: #0CCE6B;
                 transition-duration: 0.5s;
-        }
-        @media screen and (max-width: 960px){
-        
         }
 
     `;
@@ -148,6 +163,7 @@ export const Input = styled.input`
         border: 0.5px solid #76767E;
         height: 30px;
         width: 100%;
+        max-width: 200px;
         color: #FFF;
         margin: 10px;
         display: block;

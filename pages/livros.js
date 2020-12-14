@@ -5,7 +5,7 @@ import Modal from '../components/modal'
 import { MdDelete, MdEdit } from 'react-icons/md'
 import { BiArrowBack } from "react-icons/bi";
 import React, { useState } from 'react';
-import { Tr, Td, Th, Table, ButtonDelete, ButtonEdit, Centertwo, Cont, ContentList, MenuBar } from '../styles/styles';
+import { Tr, Td, Th, Table, ButtonDelete, ButtonEdit, Centertwo, Cont, ContentList, MenuBar, FlexContainer } from '../styles/styles';
 import { deleteData, fetchData } from '../lib/configaxios'
 
 var initialData = {

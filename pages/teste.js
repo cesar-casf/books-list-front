@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React, { useState } from 'react';
 import { BiArrowBack } from "react-icons/bi";
 import { saveData } from '../lib/configaxios'
-import { Input, ButtonYellow, Centerdiv, FlexContainer, ContentForm, MenuBar } from '../styles/styles';
+import { Input, ButtonYellow, Centerdiv, Container, ContentForm, ContentList, MenuBar, Centertwo } from '../styles/styles';
 //console.log(form);
 //saveData(form);
 //editData(form);
@@ -15,7 +15,7 @@ const initialValue = {
   category: '',
 }
 
-export default function Cadastro() {
+export default function Teste() {
   const [values, setValues] = useState(initialValue);
 
   function onChange(ev) {
@@ -38,15 +38,15 @@ export default function Cadastro() {
         Sistema de Gestão de Livros
             <Link href="/"><a style={{ textDecoration: 'none', color: '#fff', margin: '30px' }}> <BiArrowBack></BiArrowBack> Voltar</a></Link>
       </MenuBar>
-
-      <FlexContainer>
-        <ContentForm>
+      
+      <Container>
+        <ContentList>
           <Head>
             <title>Sistema de Gestão de Livros</title>
             <link rel="shortcut icon" href="/favicon.ico" />
           </Head>
 
-          <Centerdiv>
+          <Centertwo>
             <h3 style={{ justifySelf: "center" }}>Cadastro de Livros</h3>
             <form id="bookForm" name="bookForm" onSubmit={onSubmit}>
 
@@ -59,10 +59,10 @@ export default function Cadastro() {
 
               <ButtonYellow type='submit'>Enviar</ButtonYellow>
             </form>
-          </Centerdiv>
+          </Centertwo>
 
-        </ContentForm>
-      </FlexContainer>
+        </ContentList>
+      </Container>
 
     </div>
   )
