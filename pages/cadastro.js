@@ -50,11 +50,11 @@ export default function Cadastro() {
             <h3 style={{ justifySelf: "center" }}>Cadastro de Livros</h3>
             <form id="bookForm" name="bookForm" onSubmit={onSubmit}>
 
-              <label style={{ marginLeft: "10px" }} htmlFor="titulo">Título:</label>
+              <label style={{ marginLeft: "2px" }} htmlFor="titulo">Título:</label>
               <Input id="title" name="title" onChange={onChange} require="required"></Input>
-              <label style={{ marginLeft: "10px" }} htmlFor="autor">Autor:</label>
+              <label style={{ marginLeft: "2px" }} htmlFor="autor">Autor:</label>
               <Input id="autor" name="autor" onChange={onChange} required="required"></Input>
-              <label style={{ marginLeft: "10px" }} htmlFor="category">Categoria:</label>
+              <label style={{ marginLeft: "2px" }} htmlFor="category">Categoria:</label>
               <Input id="category" name="category" onChange={onChange} required="required"></Input>
 
               <ButtonYellow type='submit'>Enviar</ButtonYellow>

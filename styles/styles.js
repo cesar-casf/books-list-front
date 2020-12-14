@@ -67,6 +67,8 @@ export const Content = styled.div`
 
     @media screen and (max-width: 960px){
         margin: 5px;
+        max-width: 960px;
+        width: 90%;
     }
 
     `;
@@ -83,7 +85,13 @@ export const ContentForm = styled(Content)`
         border-color: #DCED31;
         width: 70%;
         min-width: 270px;
-        display: block;
+        display: flex;
+
+        @media screen and (max-width: 960px){
+        margin: 5px;
+        max-width: 400px;
+        width: 90%;
+    }
     `;
 
 export const ContentList = styled(Content)`
@@ -117,7 +125,7 @@ export const MenuBar = styled.nav`
 export const Centerdiv = styled.div`
         align-items: center;
         justify-content: center;
-        display: inline-grid;
+        display: grid;
         width: 80%px;
         height: 500px;
     `;
@@ -127,7 +135,7 @@ export const ButtonYellow = styled.button`
         background: #DCED31;
         color: #201f24;
         font-size: 1.3em;
-        margin: 10px;
+        margin: 0px;
         margin-bottom: 30px;
         padding: 0.25em 1em;
         border: 2px solid #DCED31;
@@ -151,21 +159,34 @@ export const ButtonGreen = styled(ButtonYellow)`
 export const ButtonRed = styled(ButtonYellow)`
         background: #C70039;
         border: 2px solid #C70039;
+        margin-left: 10px;
 
         :hover{
             background: #201f24;
             color: #C70039;
         }
+
+        @media screen and (max-width: 407px){
+            margin-left: 2px;
+        }
+        @media screen and (max-width: 400px){
+            margin-left: 1px;
+        }
+        @media screen and (max-width: 393px){
+            margin-left: 0px;
+        }
 `;
 
 export const Input = styled.input`
+        padding: 0;
         background: #121214;
         border: 0.5px solid #76767E;
         height: 30px;
         width: 100%;
         max-width: 200px;
         color: #FFF;
-        margin: 10px;
+        margin-top: 5px;
+        margin-bottom: 10px;
         display: block;
 
 

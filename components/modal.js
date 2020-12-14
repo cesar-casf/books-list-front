@@ -48,11 +48,11 @@ export default function Modal({ onClose = () => { }, dados }) {
           <h3 style={{ justifySelf: "center" }}>Editar Livro: {dados.initialData.title}</h3>
           <form id="bookForm" name="bookForm" onSubmit={onSubmit}>
 
-            <label style={{ marginLeft: "10px" }} htmlFor="titulo">Título:</label>
+            <label style={{ marginLeft: "2px" }} htmlFor="titulo">Título:</label>
             <Input id="title" name="title" onChange={onChange}></Input>
-            <label style={{ marginLeft: "10px" }} htmlFor="autor">Autor:</label>
+            <label style={{ marginLeft: "2px" }} htmlFor="autor">Autor:</label>
             <Input id="autor" name="autor" onChange={onChange}></Input>
-            <label style={{ marginLeft: "10px" }} htmlFor="category">Categoria:</label>
+            <label style={{ marginLeft: "2px" }} htmlFor="category">Categoria:</label>
             <Input id="category" name="category" onChange={onChange}></Input>
 
             <ButtonGreen type='submit'>Enviar</ButtonGreen>

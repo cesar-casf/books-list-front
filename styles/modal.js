@@ -18,6 +18,7 @@ export const Content = styled.div`
     background: #fff;
     width: 60%;
     height: 60%;
+    display: flex;
 `;
 
 export const ContentForm = styled.div`
