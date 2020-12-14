@@ -127,6 +127,16 @@ export const ButtonGreen = styled(ButtonYellow)`
         }
     `;
 
+export const ButtonRed = styled(ButtonYellow)`
+        background: #C70039;
+        border: 2px solid #C70039;
+
+        :hover{
+            background: #201f24;
+            color: #C70039;
+        }
+`;
+
 export const Input = styled.input`
         background: #121214;
         border: 0.5px solid #76767E;
@@ -162,10 +172,10 @@ export const Input = styled.input`
         border: 2px solid #525252;
         display: inline-table;
 
-            @media screen and (max-width: 1020px){
+                @media screen and (max-width: 1020px){
                     font-size: 1em;
                 }
-            @media screen and (max-width: 800px){
+                @media screen and (max-width: 800px){
                     font-size: .7em;
                 }
                 @media screen and (max-width: 799px){
@@ -178,7 +188,17 @@ export const Input = styled.input`
         border: 1px solid #525252;
         padding: 12px;
         height: 40px;
+        max-width: 200px;
         width: 60%;
+        min-width: 200px;
+        
+        @media screen and (max-width: 1000px){
+            max-width: auto;
+            width: 60%;
+            height: auto;
+            min-width: auto;
+                }
+
     `;
 
     export const Th = styled(Td)`

@@ -5,53 +5,54 @@ import { ButtonGreen, ButtonYellow, Centerdiv, Container, Content, ContentTwo, M
 
 export default function Home() {
   return (
-    <div style={{height: "100%", width: "100%"}}>
+    <div style={{ height: "100%", width: "100%" }}>
       <MenuBar>
-      Sistema de Gestão de Livros
+        Sistema de Gestão de Livros
       </MenuBar>
       <Head>
-        <title>Home - Book List InovaGS</title>
+        <title>Sistema de Gestão de Livros</title>
+        <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
 
-    <Container>
-          <Content>
-              <a style={{ textDecoration: 'none' }}>
-                <Centerdiv>
-                  <Image
-                    src="/bookadd.svg"
-                    width={100}
-                    height={100}
-                  />
-                 <Link href="/cadastro">
-                   <ButtonYellow>Cadastrar livro</ButtonYellow>
-                </Link>
-                </Centerdiv>
-              </a>
-            
-          </Content>
+      <Container>
+        <Content>
+          <a style={{ textDecoration: 'none' }}>
+            <Centerdiv>
+              <Image
+                src="/bookadd.svg"
+                width={100}
+                height={100}
+              />
+              <Link href="/cadastro">
+                <ButtonYellow>Cadastrar livro</ButtonYellow>
+              </Link>
+            </Centerdiv>
+          </a>
 
-        
+        </Content>
 
-        
-          <ContentTwo>
-            
-              <a style={{ textDecoration: 'none' }}>
-                <Centerdiv>
-                  <Image
-                    src="/booklist.svg"
-                    width={100}
-                    height={100}
-                  />
-                <Link href="/livros">
-                  <ButtonGreen>Listar livros</ButtonGreen>
-                </Link>
-                </Centerdiv>
-              </a>
-            
-          </ContentTwo>
 
-        
+
+
+        <ContentTwo>
+
+          <a style={{ textDecoration: 'none' }}>
+            <Centerdiv>
+              <Image
+                src="/booklist.svg"
+                width={100}
+                height={100}
+              />
+              <Link href="/livros">
+                <ButtonGreen>Listar livros</ButtonGreen>
+              </Link>
+            </Centerdiv>
+          </a>
+
+        </ContentTwo>
+
+
       </Container>
-      </div>
+    </div>
   )
 }

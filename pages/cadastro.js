@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import React, { useState } from 'react';
 import { BiArrowBack } from "react-icons/bi";
-import { saveData, editData, deleteData } from '../lib/configaxios'
+import { saveData } from '../lib/configaxios'
 import { Input, ButtonYellow, Centerdiv, Container, ContentForm, MenuBar } from '../styles/styles';
 //console.log(form);
 //saveData(form);
@@ -24,19 +24,14 @@ export default function Cadastro() {
     setValues({ ...values, [name]: value });
   }
 
-  function clearInput(ev) {
-    ev.target.value = '';
-  }
-
   function onSubmit(ev) {
     ev.preventDefault();
-    console.log(values);
     saveData(values);
     alert('Cadastrado com sucesso!');
     const myForm = ev.target;
     myForm.reset();
   }
-//
+  //
   return (
     <div>
       <MenuBar>
@@ -46,7 +41,8 @@ export default function Cadastro() {
       <Container>
         <ContentForm>
           <Head>
-            <title>Create Next App</title>
+            <title>Sistema de Gestão de Livros</title>
+            <link rel="shortcut icon" href="/favicon.ico" />
           </Head>
 
           <Centerdiv>
@@ -54,11 +50,11 @@ export default function Cadastro() {
             <form id="bookForm" name="bookForm" onSubmit={onSubmit}>
 
               <label style={{ marginLeft: "10px" }} htmlFor="titulo">Título:</label>
-              <Input id="title" name="title" onChange={onChange}></Input>
+              <Input id="title" name="title" onChange={onChange} require="required"></Input>
               <label style={{ marginLeft: "10px" }} htmlFor="autor">Autor:</label>
-              <Input id="autor" name="autor" onChange={onChange}></Input>
+              <Input id="autor" name="autor" onChange={onChange} required="required"></Input>
               <label style={{ marginLeft: "10px" }} htmlFor="category">Categoria:</label>
-              <Input id="category" name="category" onChange={onChange}></Input>
+              <Input id="category" name="category" onChange={onChange} required="required"></Input>
 
               <ButtonYellow type='submit'>Enviar</ButtonYellow>
             </form>
