@@ -22,6 +22,8 @@ export const Container = styled.div`
 
     @media screen and (max-width: 960px){
         display: block;
+        align-self: center;
+        justify-self: center;
     }
 `;
 
@@ -71,13 +73,17 @@ export const ContentList = styled(Content)`
         border-color: #0CCE6B;
         max-width: 1000px;
         width: 90%;
-        min-width: 350px;
+        min-width: 300px;
         height: auto;
         display: block;
         :hover{
                 border-color: #0CCE6B;
                 transition-duration: 0.5s;
         }
+        @media screen and (max-width: 960px){
+        
+        }
+
     `;
    
 

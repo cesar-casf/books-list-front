@@ -13,8 +13,9 @@ export default function Home() {
         <title>Sistema de Gestão de Livros</title>
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
-
+<center>
       <Container>
+        
         <Content>
           <a style={{ textDecoration: 'none' }}>
             <Centerdiv>
@@ -35,7 +36,6 @@ export default function Home() {
 
 
         <ContentTwo>
-
           <a style={{ textDecoration: 'none' }}>
             <Centerdiv>
               <Image
@@ -50,9 +50,8 @@ export default function Home() {
           </a>
 
         </ContentTwo>
-
-
       </Container>
+      </center>
     </div>
   )
 }
