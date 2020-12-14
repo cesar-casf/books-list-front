@@ -18,13 +18,13 @@ const initialValue = {
 
 export default function Livros({ dados }) {
 
-    const { data }  = useSWR('http://localhost:8080/api/books/', fetchData, { initialData: dados, refreshInterval: 10 })
+    const { data }  = useSWR('https://books-listapi.herokuapp.com/api/books', fetchData, { initialData: dados, refreshInterval: 10 })
 
     const [values, setValues] = useState(initialValue);
 
     async function deleteData(livro)
     { 
-    await axios.delete('http://localhost:8080/api/book/', {data: livro}).then(function(response)
+    await axios.delete('https://books-listapi.herokuapp.com/api/book', {data: livro}).then(function(response)
     {
       console.log("Livro deletado");
 
@@ -111,7 +111,7 @@ export default function Livros({ dados }) {
 
 export async function getStaticProps(){
 
-    const dados = await fetchData('http://localhost:8080/api/books/');
+    const dados = await fetchData('https://books-listapi.herokuapp.com/api/books');
     return {
         props: {dados}
     }
