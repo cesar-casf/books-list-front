@@ -4,7 +4,8 @@ Abrir o projeto em um editor de código de preferência. Para esse projeto, foi 
   ### É necessário ter instalado:
    
   [npm](https://www.npmjs.com/) ou [yarn](https://yarnpkg.com/) (gerenciador de dependências) 
-  [Node.js](https://nodejs.org/en/) 10.13 ou mais novo
+  
+  [Node.js 10.13](https://nodejs.org/en/) ou mais novo
 
 Utilizar um dos comandos para instalar as dependências necessárias
 ```bash
